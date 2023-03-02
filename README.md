@@ -1,17 +1,17 @@
-## Ejercicio - La liga
-Se solicita crear un programa que simule una liga de fútbol por jornadas.
+## Ejercicio - La Liga
+Se solicita crear un programa que simule una Liga de fútbol por jornadas.
 
 El programa debe mostrar un menú con las siguientes opciones:
-- Crear nueva liga. Debe pedir un nombre para la liga y rellenar con
-  equipos la liga (22 equipos)
-- Jugar liga. Solo debe permitirlo si una liga está creada. Este abrirá un
+- Crear nueva Liga. Debe pedir un nombre para la Liga y rellenar con
+  equipos la Liga (22 equipos)
+- Jugar Liga. Solo debe permitirlo si una Liga está creada. Este abrirá un
   submenú:
   - Siguiente jornada. Simula 11 partidos
   - Consultar tabla. Muestra, en orden de puntuación descendente,
     los equipos.
-  - Pausar liga. Devuelve al menú anterior.
-  - Eliminar liga actual. Solicitará confirmación del usuario y elimina todos
-    los datos de la liga actual. Solo debe poder hacerse si hay una liga
+  - Pausar Liga. Devuelve al menú anterior.
+  - Eliminar Liga actual. Solicitará confirmación del usuario y elimina todos
+    los datos de la Liga actual. Solo debe poder hacerse si hay una Liga
     creada.
 - Salir. Termina el programa.
 
@@ -29,11 +29,11 @@ Varias especificaciones:
 - No se calculará una victoria o derrota, si no que se calcularán los goles
   que mete cada equipo y se comparará entre ellos quien metió más
   goles o si hay empate.
-- Se debe crear una interfaz para “liga”, con una clase “liga_futbol”
-  para especificar la liga de fútbol.
+- Se debe crear una interfaz para “Liga”, con una clase “Liga_futbol”
+  para especificar la Liga de fútbol.
   - Métodos comunes podrían ser “calcular jornada”, por ejemplo.
 - Se debe crear una interfaz “equipo”, con una clase “equipo_futbol”
   para especificar que se trata de un equipo de fútbol.
   - Se puede incluso añadir una clase abstracta en vez de una
     interfaz si se cree conveniente.
-- La liga debe contener un array de equipos.
+- La Liga debe contener un array de equipos.
