@@ -18,18 +18,22 @@ public class Main {
     
     public static void Options(int menu, ArrayList<Liga_futbol> ligas) {
         if (menu == 1) {
-            System.out.println("\n¿Qué nombre desea darle a la liga?");
-            String nombre = Input.str();
-            Liga_futbol ligaFutbol = new Liga_futbol(nombre);
-            ligas.add(ligaFutbol);
-            System.out.println("Ligas actuales:");
-            for (int i = 0; i < ligas.size(); i++) {
-                System.out.println("- " + ligas.get(i).nombre);
-            }
+            LigaCreator(ligas);
         } else if (menu == 2) {
             System.out.println("jugar una liga");
         } else if (menu != 0) {
             System.out.println("Por favor, seleccione una opción válida.");
+        }
+    }
+
+    public static void LigaCreator(ArrayList<Liga_futbol> ligas) {
+        System.out.println("\n¿Qué nombre desea darle a la liga?");
+        String nombre = Input.str();
+        Liga_futbol ligaFutbol = new Liga_futbol(nombre);
+        ligas.add(ligaFutbol);
+        System.out.println("Ligas actuales:");
+        for (int i = 0; i < ligas.size(); i++) {
+            System.out.println("- " + ligas.get(i).nombre);
         }
     }
 }
