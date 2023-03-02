@@ -9,10 +9,10 @@ El programa debe mostrar un menú con las siguientes opciones:
   - Siguiente jornada. Simula 11 partidos
   - Consultar tabla. Muestra, en orden de puntuación descendente,
     los equipos.
-- Pausar liga. Devuelve al menú anterior.
-- Eliminar liga actual. Solicitará confirmación del usuario y elimina todos
-  los datos de la liga actual. Solo debe poder hacerse si hay una liga
-  creada.
+  - Pausar liga. Devuelve al menú anterior.
+  - Eliminar liga actual. Solicitará confirmación del usuario y elimina todos
+    los datos de la liga actual. Solo debe poder hacerse si hay una liga
+    creada.
 - Salir. Termina el programa.
 
 Varias especificaciones:
