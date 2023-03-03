@@ -1,5 +1,5 @@
-public abstract class equipo {
-    String club;
+public abstract class Equipo {
+    String nombre;
     int partidosJugados;
     int golesAFavor;
     int golesEnContra;
@@ -8,8 +8,8 @@ public abstract class equipo {
     int empates;
     int puntos;
 
-    public void setClub(String club) {
-        this.club = club;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setPartidosJugados() {

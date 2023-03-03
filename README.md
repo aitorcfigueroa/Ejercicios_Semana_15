@@ -17,8 +17,8 @@ El programa debe mostrar un menú con las siguientes opciones:
 
 Varias especificaciones:
 - Los equipos se enfrentan entre ellos 2 veces, ida y vuelta. No se
-  enfrentará un equipo contra sí mismo.
-- De cada equipo se solicita tener información de:
+  enfrentará un Equipo contra sí mismo.
+- De cada Equipo se solicita tener información de:
   - Partidos jugados
   - Goles a favor
   - Goles en contra
@@ -27,13 +27,13 @@ Varias especificaciones:
   - Empates
   - Puntuación
 - No se calculará una victoria o derrota, si no que se calcularán los goles
-  que mete cada equipo y se comparará entre ellos quien metió más
+  que mete cada Equipo y se comparará entre ellos quien metió más
   goles o si hay empate.
 - Se debe crear una interfaz para “Liga”, con una clase “Liga_futbol”
   para especificar la Liga de fútbol.
   - Métodos comunes podrían ser “calcular jornada”, por ejemplo.
-- Se debe crear una interfaz “equipo”, con una clase “equipo_futbol”
-  para especificar que se trata de un equipo de fútbol.
+- Se debe crear una interfaz “Equipo”, con una clase “Equipo_futbol”
+  para especificar que se trata de un Equipo de fútbol.
   - Se puede incluso añadir una clase abstracta en vez de una
     interfaz si se cree conveniente.
 - La Liga debe contener un array de equipos.

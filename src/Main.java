@@ -72,7 +72,7 @@ public class Main {
             if (select == 1) {
                 //TODO: Siguiente jornada.
             } else if (select == 2) {
-                //TODO: Consultar clasificación.
+                ligas.get(index).clasificacion();
             } else if (select == 3) {
                 EliminarLiga(ligas, index);
             } else if (select == 0) {
