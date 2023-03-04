@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Liga_futbol implements Liga {
     String nombre;
@@ -95,11 +94,24 @@ public class Liga_futbol implements Liga {
     }
 
     public void clasificacion() {
-        listaEquipos.sort(new Comparator<Equipo_futbol>() {
-            @Override
-            public int compare(Equipo_futbol o1, Equipo_futbol o2) {
-                return Integer.compare(o2.puntos, o1.puntos);
+        listaEquipos.sort((o1, o2) -> {
+            int puntos = Integer.compare(o2.puntos, o1.puntos);
+            if (puntos != 0) {
+               return puntos;
             }
+            int victorias = Integer.compare(o2.victorias, o1.victorias);
+            if (victorias != 0) {
+               return victorias;
+            }
+            int empates = Integer.compare(o2.empates, o1.empates);
+            if (empates != 0) {
+               return empates;
+            }
+            int gFavor = Integer.compare(o2.golesAFavor, o1.golesAFavor);
+            if (gFavor != 0) {
+                return gFavor;
+            }
+           return Integer.compare(o1.golesEnContra, o2.golesEnContra);
         });
 
         printClas(this.nombre, listaEquipos);
