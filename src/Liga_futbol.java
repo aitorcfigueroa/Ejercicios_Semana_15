@@ -50,33 +50,8 @@ public class Liga_futbol implements Liga {
                     visitante = listaEquipos.get(k);
                 }
 
-                //Partido que se juega
-                jornada[i].setEquipoLocal(local.nombre);
-                jornada[i].setEquipoVisitante(visitante.nombre);
-                jornada[i].setGolesLocal((int) (Math.random()*6));
-                jornada[i].setGolesVisitante((int) (Math.random()*6));
-
-                //Cambiando las estadísticas de los equipos
-                local.setPartidosJugados();
-                visitante.setPartidosJugados();
-                local.setGolesAFavor(jornada[i].getGolesLocal());
-                local.setGolesEnContra(jornada[i].getGolesVisitante());
-                visitante.setGolesAFavor(jornada[i].getGolesVisitante());
-                visitante.setGolesEnContra(jornada[i].getGolesLocal());
-
-                //Comprobando quien ganó
-                if (jornada[i].getGolesLocal() == jornada[i].getGolesVisitante()) {
-                    local.setEmpates();
-                    visitante.setEmpates();
-                } else if (jornada[i].getGolesLocal() > jornada[i].getGolesVisitante()) {
-                    local.setVictorias();
-                    visitante.setDerrotas();
-                } else if (jornada[i].getGolesLocal() < jornada[i].getGolesVisitante()) {
-                    local.setDerrotas();
-                    visitante.setVictorias();
-                }
-                local.setPuntos();
-                visitante.setPuntos();
+                //Almacenar datos de cada partido de la jornada
+                guardarPartido(jornada[i], local, visitante);
 
                 k++;
                 if (k == numJornadas/2) {
@@ -91,6 +66,36 @@ public class Liga_futbol implements Liga {
             printJornada(this.jornada, jornada);
         }
 
+    }
+
+    public static void guardarPartido(Partido jornada, Equipo_futbol local, Equipo_futbol visitante) {
+        //Partido que se juega
+        jornada.setEquipoLocal(local.nombre);
+        jornada.setEquipoVisitante(visitante.nombre);
+        jornada.setGolesLocal((int) (Math.random()*6));
+        jornada.setGolesVisitante((int) (Math.random()*6));
+
+        //Cambiando las estadísticas de los equipos
+        local.setPartidosJugados();
+        visitante.setPartidosJugados();
+        local.setGolesAFavor(jornada.getGolesLocal());
+        local.setGolesEnContra(jornada.getGolesVisitante());
+        visitante.setGolesAFavor(jornada.getGolesVisitante());
+        visitante.setGolesEnContra(jornada.getGolesLocal());
+
+        //Comprobando quien ganó
+        if (jornada.getGolesLocal() == jornada.getGolesVisitante()) {
+            local.setEmpates();
+            visitante.setEmpates();
+        } else if (jornada.getGolesLocal() > jornada.getGolesVisitante()) {
+            local.setVictorias();
+            visitante.setDerrotas();
+        } else if (jornada.getGolesLocal() < jornada.getGolesVisitante()) {
+            local.setDerrotas();
+            visitante.setVictorias();
+        }
+        local.setPuntos();
+        visitante.setPuntos();
     }
 
     public void clasificacion() {
