@@ -70,11 +70,12 @@ public class Main {
                     "\n3 - Eliminar liga actual.");
             select = Input.num();
             if (select == 1) {
-                //TODO: Siguiente jornada.
+                ligas.get(index).calcular_jornada();
             } else if (select == 2) {
                 ligas.get(index).clasificacion();
             } else if (select == 3) {
                 EliminarLiga(ligas, index);
+                select = 0;
             } else if (select == 0) {
                 System.out.println("Cerrando liga " + ligas.get(index).nombre);
             } else {

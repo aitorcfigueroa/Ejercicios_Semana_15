@@ -39,4 +39,8 @@ public abstract class Equipo {
     public void setPuntos() {
         this.puntos = this.victorias*3 + this.empates;
     }
+
+    public int getPuntos() {
+        return this.victorias*3 + this.empates;
+    }
 }
